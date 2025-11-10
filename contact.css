@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  background: #FFC99F; 
+  color: #333; 
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  padding: 50px;
+}
+
+.body h2 {
+  margin-top: 100px;
+  font-size: 30px;
+}
+
+.body h3 {
+  font-size: 20px;
+}
+
+.body h4 {
+  font-size: 10px;
+  margin-bottom: 50px;
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background: #0F003D;
+  padding-bottom: 20px;
+  z-index: 1000;
+}
+
+#menu {
+  display: block;
+  color: #C0392B;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 350px;
+  background: #0F003D;
+  transform: translateY(-100%);
+  transition: all 0.4s ease-out;
+  z-index: 999;
+  gap: 10px;
+  padding: 20px;
+}
+
+.nav.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #E74C3C;
+}
+
+.search {
+  margin-top: 20px;
+  width: 90%;
+  display: flex;
+  max-width: 300px;
+  justify-content: flex-end;
+}
+
+#inputs {
+  display: flex;
+  width: 200px;
+  height: 35px;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+}
+
+.search-btn {
+  width: 40px;
+  height: 35px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #E74C3C;
+  color: white;
+  cursor: pointer;
+}
+
+.booking {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E74C3C;
+  color: white;
+  padding: 15px 30px;
+  background: #E74C3C;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.booking:hover {
+  background: #C0392B;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.review h1 {
+  margin-top: 50px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: auto;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 0 auto;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  width: 360px;
+  height: auto;
+  transform: scale(1.005);
+}
+
+.bimg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  width: 150px;
+  height: auto;
+  border: none;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  background: #C0392B;
+  color: white;
+  margin-top: 10px;
+}
+
+.buy:hover {
+  background: #621D16;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  background: #0F003D;
+  color: white;
+}
+
+.all {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: auto;
+  padding: 5px;
+  margin: 0 auto 20px auto;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info h2 {
+  font-size: 20px;
+}
+
+.info h3 {
+  font-size: 10px;
+}
+
+.text {
+  text-decoration: none;
+  color: white;
+}
+
+.text:hover {
+  text-decoration: underline;
+}
+
+#whats-app {
+  font-size: 50px;
+  color: white;
+}
+
+.copyright {
+  margin-top: auto;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  position: fixed;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0,0,0,0.6);
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.poporder {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popcontent {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.popcontent span {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.popcontent input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popcontent button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popcontent button:hover {
+  background: #218838;
+}
+
+.popcontent .close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Contact-Specific Styles */
+.contact-hero {
+  background: linear-gradient(to right, #FFC99F, #FFDAB9);
+  text-align: center;
+  padding: 100px 20px 60px;
+  color: #333;
+  position: relative;
+}
+
+.contact-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.contact-hero i {
+  font-size: 80px;
+  color: #E74C3C;
+  opacity: 0.8;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card i {
+  font-size: 50px;
+  color: #C0392B;
+  margin-bottom: 15px;
+}
+
+.contact-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #0F003D;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-form input,
+.email-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.email-form button {
+  background: #E74C3C;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.email-form button:hover {
+  background: #C0392B;
+}
+
+.cta {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Modal Styles (WhatsApp) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #E74C3C;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0F003D;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal label {
+  font-weight: bold;
+  color: #333;
+}
+
+.modal input,
+.modal textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal button[type="submit"] {
+  background: #25D366; /* WhatsApp Green */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal button[type="submit"]:hover {
+  background: #128C7E;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .booking {
+    background: #C0392B;
+    border: none;
+    color: #FFFFFF;
+    width: 200px;
+    border-radius: 40px;
+  }
+
+  .booking:hover {
+    transform: scale(1.03);
+    color: #FFFFFF;
+  }
+
+  #menu {
+    display: block;
+    color: #C0392B;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .review h1 {
+    font-size: 20px;
+  }
+
+  .box {
+    width: 340px;
+    height: auto;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding-bottom: 20px;
+  }
+
+  .bimg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .all {
+    width: 100%;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  /* Contact Mobile */
+  .contact-hero h1 {
+    font-size: 28px;
+  }
+
+  .contact-hero p {
+    font-size: 16px;
+  }
+
+  .contact-hero i {
+    font-size: 60px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .modal-content {
+    margin: 20% auto;
+    width: 95%;
+    padding: 20px;
+  }
+}

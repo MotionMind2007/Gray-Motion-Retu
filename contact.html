@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Gray Motion Retu</title>
+  <meta name="description" content="Gray Motion Retu-এর সাথে যোগাযোগ করুন – WhatsApp বা ইমেইলের মাধ্যমে বুকিং বা প্রশ্ন করুন।">
+  <link rel="stylesheet" href="contact.css"> <!-- শুধু এই CSS ফাইল -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="head">
+    <i id="menu" class="fa-solid fa-bars-staggered"></i>
+    <div class="nav">
+      <a href="retu.html">Home</a>
+      <a href="about.html">About Ours</a>
+      <a href="service.html">Service</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact us</a>
+      <span class="search">
+        <input id="inputs" type="text" placeholder="search here..">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </span>
+    </div>
+  </div>
+
+  <section class="contact-hero">
+    <h1>যোগাযোগ করুন</h1>
+    <p>আমাদের সাথে যোগাযোগ করুন – দ্রুত রেসপন্সের জন্য WhatsApp বা ইমেইল ব্যবহার করুন</p>
+    <i class="fa-solid fa-envelope-circle-check"></i>
+  </section>
+
+  <section class="contact-grid">
+    <!-- WhatsApp Form Section -->
+    <div class="contact-card">
+      <i class="fa-brands fa-whatsapp"></i>
+      <h2>WhatsApp-এ চ্যাট করুন</h2>
+      <p>দ্রুত প্রশ্নের উত্তর পান – ২৪/৭ সাপোর্ট</p>
+      <button class="booking" id="whatsappBtn">WhatsApp ফর্ম খুলুন</button>
+    </div>
+
+    <!-- Email Form Section -->
+    <div class="contact-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h2>ইমেইল পাঠান</h2>
+      <p>বিস্তারিত বুকিং বা প্রস্তাব পাঠান</p>
+      <form id="emailForm" class="email-form">
+        <input type="text" id="emailName" placeholder="আপনার নাম" required>
+        <input type="email" id="emailAddress" placeholder="আপনার ইমেইল" required>
+        <input type="text" id="emailSubject" placeholder="সাবজেক্ট" required>
+        <textarea id="emailMessage" rows="4" placeholder="আপনার মেসেজ..." required></textarea>
+        <button type="submit">ইমেইল পাঠান</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WhatsApp Modal -->
+  <div id="whatsappModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>WhatsApp যোগাযোগ ফর্ম</h2>
+      <form id="whatsappForm">
+        <label for="waName">আপনার নাম:</label>
+        <input type="text" id="waName" name="waName" required>
+
+        <label for="waPhone">ফোন নম্বর (+880):</label>
+        <input type="tel" id="waPhone" name="waPhone" placeholder="01XXXXXXXXX" required pattern="[0-9]{11}">
+
+        <label for="waMessage">মেসেজ:</label>
+        <textarea id="waMessage" name="waMessage" rows="4" placeholder="আপনার প্রশ্ন বা বুকিং বিবরণ..." required></textarea>
+
+        <button type="submit">WhatsApp-এ পাঠান</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="https://wa.me/+8801804187223" class="booking">এখনই চ্যাট করুন!</a>
+  </div>
+
+  <footer>
+    <div class="all">
+      <div class="info">
+        <h2>Gray Motion Retu</h2>
+        <h3>ঠিকানা:- শ্যামলী, আদাবর, ঢাকা।</h3>
+        <h3>Mail: <a class="text" href="mailto:graymr20@gmail.com">graymr20@gmail.com</a></h3>
+        <h3>Phone: <a class="text" href="tel:+8801602537118">+8801602537118</a></h3>
+      </div>
+      <div class="msg">
+        <a href="https://wa.me/+8801804187223"><i id="whats-app" class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">&copy; 2025 | Gray Motion Retu reserved all rights</p>
+  </footer>
+
+  <!-- Inline JavaScript: Navbar + Search + Forms -->
+  <script>
+    // Navbar Menu Toggle
+    const menuBtn = document.getElementById('menu');
+    const nav = document.querySelector('.nav');
+    const overlay = document.querySelector('.overlay');
+
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    // Basic Search Functionality
+    const searchBtn = document.querySelector('.search-btn');
+    const searchInput = document.getElementById('inputs');
+    searchBtn.addEventListener('click', () => {
+      const query = searchInput.value;
+      if (query) {
+        alert(`সার্চ: "${query}" – যোগাযোগের জন্য চেক করুন।`);
+      }
+    });
+
+    // WhatsApp Modal
+    const whatsappBtn = document.getElementById('whatsappBtn');
+    const whatsappModal = document.getElementById('whatsappModal');
+    const waCloseBtn = document.querySelector('#whatsappModal .close');
+    const waForm = document.getElementById('whatsappForm');
+
+    whatsappBtn.addEventListener('click', () => {
+      whatsappModal.style.display = 'block';
+    });
+
+    waCloseBtn.addEventListener('click', () => {
+      whatsappModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === whatsappModal) {
+        whatsappModal.style.display = 'none';
+      }
+    });
+
+    // WhatsApp Form Submit
+    waForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('waName').value;
+      const phone = document.getElementById('waPhone').value;
+      const message = document.getElementById('waMessage').value;
+
+      if (!phone || phone.length !== 11 || !/^[0-9]+$/.test(phone)) {
+        alert('সঠিক ১১ ডিজিটের ফোন দিন!');
+        return;
+      }
+
+      const fullPhone = '+8801' + phone;
+      const text = `নতুন যোগাযোগ!\n\nনাম: ${name}\nফোন: ${fullPhone}\nমেসেজ: ${message}\n\nGray Motion Retu।`;
+      window.open(`https://wa.me/8801804187223?text=${encodeURIComponent(text)}`, '_blank');
+
+      waForm.reset();
+      whatsappModal.style.display = 'none';
+      alert('WhatsApp-এ মেসেজ পাঠানো হয়েছে! শীঘ্রই রিপ্লাই আসবে।');
+    });
+
+    // Email Form Submit
+    const emailForm = document.getElementById('emailForm');
+    emailForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('emailName').value;
+      const email = document.getElementById('emailAddress').value;
+      const subject = document.getElementById('emailSubject').value;
+      const message = document.getElementById('emailMessage').value;
+
+      const mailtoLink = `mailto:graymr20@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`নাম: ${name}\nইমেইল: ${email}\n\n${message}`)}`;
+      window.location.href = mailtoLink;
+
+      emailForm.reset();
+      alert('ইমেইল অ্যাপ খুলে গেছে! মেসেজ পাঠান।');
+    });
+  </script>
+</body>
+</html>

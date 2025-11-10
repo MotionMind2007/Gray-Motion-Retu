@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Gray Motion Retu</title>
+  <meta name="description" content="Gray Motion Retu এর প্রিমিয়াম সার্ভিসসমূহ - ক্যাটারিং, হোম ডেলিভারি, ইভেন্ট বুকিং এবং আরও।">
+  <link rel="stylesheet" href="service.css"> <!-- শুধু এই CSS ফাইল -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="head">
+    <i id="menu" class="fa-solid fa-bars-staggered"></i>
+    <div class="nav">
+      <a href="retu.html">Home</a>
+      <a href="about.html">About Ours</a>
+      <a href="service.html">Service</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact us</a>
+      <span class="search">
+        <input id="inputs" type="text" placeholder="search here..">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </span>
+    </div>
+  </div>
+
+  <section class="service-hero">
+    <h1>আমাদের সার্ভিসসমূহ</h1>
+    <p>আপনার প্রয়োজন অনুযায়ী প্রিমিয়াম ফুড সার্ভিস, ক্যাটারিং ও হোম ডেলিভারি</p>
+  </section>
+
+  <section class="service-grid">
+    <div class="service-card">
+      <i class="fa-solid fa-utensils"></i>
+      <h2>ফুড বুকিং</h2>
+      <p>আপনার পছন্দের খাবার অগ্রিম বুক করুন এবং নির্দিষ্ট সময়ে ডেলিভারি পান।</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-truck"></i>
+      <h2>হোম ডেলিভারি</h2>
+      <p>ঢাকার নির্দিষ্ট এলাকায় দ্রুত ও নিরাপদ খাবার পৌঁছে দিচ্ছি।</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-champagne-glasses"></i>
+      <h2>ইভেন্ট ক্যাটারিং</h2>
+      <p>বিয়ে, জন্মদিন, কর্পোরেট পার্টি — যেকোনো ইভেন্টে আমাদের ক্যাটারিং সার্ভিস নিন।</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-broom"></i>
+      <h2>হাইজিন গ্যারান্টি</h2>
+      <p>আমাদের রান্নাঘর ও পরিবেশন সম্পূর্ণ স্বাস্থ্যবিধি মেনে পরিচালিত হয়।</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-headset"></i>
+      <h2>কাস্টমার সাপোর্ট</h2>
+      <p>২৪/৭ হেল্পলাইন — যেকোনো প্রশ্ন বা সমস্যায় আমরা আছি আপনার পাশে।</p>
+    </div>
+    <div class="service-card">
+      <i class="fa-solid fa-star"></i>
+      <h2>বিশ্বস্ততা ও মান</h2>
+      <p>প্রতিটি খাবারে আমরা দিই স্বাদের নিশ্চয়তা ও গ্রাহক সন্তুষ্টি।</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <button class="booking" id="bookingBtn">Book Your Service</button>
+  </div>
+
+  <!-- পপ-আপ মডাল -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>সার্ভিস বুকিং ফর্ম</h2>
+      <form id="bookingForm">
+        <label for="name">আপনার নাম:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">ফোন নম্বর (+880):</label>
+        <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required pattern="[0-9]{11}">
+
+        <label for="service">সার্ভিস টাইপ:</label>
+        <select id="service" name="service" required>
+          <option value="">নির্বাচন করুন</option>
+          <option value="food-booking">ফুড বুকিং</option>
+          <option value="home-delivery">হোম ডেলিভারি</option>
+          <option value="event-catering">ইভেন্ট ক্যাটারিং</option>
+          <option value="other">অন্যান্য</option>
+        </select>
+
+        <label for="message">অতিরিক্ত মেসেজ:</label>
+        <textarea id="message" name="message" rows="4" placeholder="যেকোনো বিশেষ নোট..."></textarea>
+
+        <button type="submit">কনফার্ম করুন</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="all">
+      <div class="info">
+        <h2>Gray Motion Retu</h2>
+        <h3>ঠিকানা:- শ্যামলী, আদাবর, ঢাকা।</h3>
+        <h3>Mail: <a class="text" href="mailto:graymr20@gmail.com">graymr20@gmail.com</a></h3>
+        <h3>Phone: <a class="text" href="tel:+8801602537118">+8801602537118</a></h3>
+      </div>
+      <div class="msg">
+        <a href="https://wa.me/+8801804187223"><i id="whats-app" class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">&copy; 2025 | Gray Motion Retu reserved all rights</p>
+  </footer>
+
+  <!-- সম্পূর্ণ Inline JavaScript: Navbar + Search + Booking Modal -->
+  <script>
+    // Navbar Menu Toggle
+    const menuBtn = document.getElementById('menu');
+    const nav = document.querySelector('.nav');
+    const overlay = document.querySelector('.overlay');
+
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    // Basic Search Functionality (placeholder – real search যোগ করতে চাইলে বলো)
+    const searchBtn = document.querySelector('.search-btn');
+    const searchInput = document.getElementById('inputs');
+    searchBtn.addEventListener('click', () => {
+      const query = searchInput.value;
+      if (query) {
+        alert(`সার্চ: "${query}" – এখানে রেজাল্ট দেখাবে।`); // Placeholder – actual search implement করো
+        // window.location.href = `search.html?q=${encodeURIComponent(query)}`; // যদি search page থাকে
+      }
+    });
+
+    // Booking Modal ওপেন/ক্লোজ
+    const bookingBtn = document.getElementById('bookingBtn');
+    const modal = document.getElementById('bookingModal');
+    const closeBtn = document.querySelector('.close');
+    const form = document.getElementById('bookingForm');
+
+    if (bookingBtn && modal) { // Safety check
+      bookingBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        console.log('Modal opened!'); // Debug log
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+
+    // ফর্ম সাবমিট হ্যান্ডলার (WhatsApp)
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value || 'কোনো অতিরিক্ত মেসেজ নেই।';
+
+        // ভ্যালিডেশন
+        if (!phone || phone.length !== 11 || !/^[0-9]+$/.test(phone)) {
+          alert('দয়া করে সঠিক ১১ ডিজিটের ফোন নম্বর দিন (যেমন: 01XXXXXXXXX)');
+          return;
+        }
+
+        const fullPhone = '+8801' + phone;
+        const text = `নতুন বুকিং রিকোয়েস্ট!\n\nনাম: ${name}\nফোন: ${fullPhone}\nসার্ভিস: ${service}\nমেসেজ: ${message}\n\nGray Motion Retu থেকে বুকিং।`;
+        
+        window.open(`https://wa.me/8801804187223?text=${encodeURIComponent(text)}`, '_blank');
+
+        form.reset();
+        modal.style.display = 'none';
+        alert('আপনার বুকিং রিকোয়েস্ট WhatsApp-এ পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।');
+      });
+    }
+  </script>
+</body>
+</html>

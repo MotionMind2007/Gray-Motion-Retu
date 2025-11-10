@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Gray Motion Retu</title>
+  <meta name="description" content="Gray Motion Retu-এর গ্যালারি – আমাদের প্রিমিয়াম খাবার, ক্যাটারিং ইভেন্ট এবং হোম ডেলিভারির ছবি দেখুন।">
+  <link rel="stylesheet" href="gallery.css"> <!-- শুধু এই CSS ফাইল -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="head">
+    <i id="menu" class="fa-solid fa-bars-staggered"></i>
+    <div class="nav">
+      <a href="retu.html">Home</a>
+      <a href="about.html">About Ours</a>
+      <a href="service.html">Service</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact us</a>
+      <span class="search">
+        <input id="inputs" type="text" placeholder="search here..">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </span>
+    </div>
+  </div>
+
+  <section class="gallery-hero">
+    <h1>আমাদের গ্যালারি</h1>
+    <p>আমাদের সুস্বাদু খাবার, ইভেন্ট এবং সার্ভিসের মুহূর্তগুলো দেখুন</p>
+  </section>
+
+  <section class="gallery-grid">
+    <div class="gallery-card">
+      <img src="biriani.jpg"alt="সুস্বাদু বিরিয়ানি">
+      <div class="card-overlay">
+        <h3>বিরিয়ানি স্পেশাল</h3>
+        <p>আমাদের সিগনেচার ডিশ</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="morog.jpg" alt="মোরগ বিরিয়ানি">
+      <div class="card-overlay">
+        <h3>ইভেন্ট ক্যাটারিং</h3>
+        <p>বিয়ের পার্টি মুহূর্ত</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="OIP.jpeg" alt="হোম ডেলিভারি">
+      <div class="card-overlay">
+        <h3>হোম ডেলিভারি</h3>
+        <p>দ্রুত ডেলিভারি সার্ভিস</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=4" alt="ডেজার্ট">
+      <div class="card-overlay">
+        <h3>স্পেশাল ডেজার্ট</h3>
+        <p>মিষ্টি মুহূর্ত</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=5" alt="কর্পোরেট ইভেন্ট">
+      <div class="card-overlay">
+        <h3>কর্পোরেট ইভেন্ট</h3>
+        <p>প্রফেশনাল সেটআপ</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="https://picsum.photos/400/300?random=6" alt="হাইজিন রান্নাঘর">
+      <div class="card-overlay">
+        <h3>হাইজিন রান্নাঘর</h3>
+        <p>স্বাস্থ্যকর পরিবেশ</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="https://wa.me/+8801804187223" class="booking">Book Now via WhatsApp</a>
+  </div>
+
+  <footer>
+    <div class="all">
+      <div class="info">
+        <h2>Gray Motion Retu</h2>
+        <h3>ঠিকানা:- শ্যামলী, আদাবর, ঢাকা।</h3>
+        <h3>Mail: <a class="text" href="mailto:graymr20@gmail.com">graymr20@gmail.com</a></h3>
+        <h3>Phone: <a class="text" href="tel:+8801602537118">+8801602537118</a></h3>
+      </div>
+      <div class="msg">
+        <a href="https://wa.me/+8801804187223"><i id="whats-app" class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">&copy; 2025 | Gray Motion Retu reserved all rights</p>
+  </footer>
+
+  <!-- Inline JavaScript: Navbar + Search -->
+  <script>
+    // Navbar Menu Toggle
+    const menuBtn = document.getElementById('menu');
+    const nav = document.querySelector('.nav');
+    const overlay = document.querySelector('.overlay');
+
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    // Basic Search Functionality
+    const searchBtn = document.querySelector('.search-btn');
+    const searchInput = document.getElementById('inputs');
+    searchBtn.addEventListener('click', () => {
+      const query = searchInput.value;
+      if (query) {
+        alert(`সার্চ: "${query}" – গ্যালারিতে "${query}" খুঁজছি।`); // Placeholder – actual filter যোগ করো
+      }
+    });
+
+    // Gallery Image Hover (optional enhancement)
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    galleryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const imgSrc = card.querySelector('img').src;
+        window.open(imgSrc, '_blank'); // Open full image in new tab
+      });
+    });
+  </script>
+</body>
+</html>
