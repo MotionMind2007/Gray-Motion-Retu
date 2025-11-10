@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gray Motion Retu | MM Company</title>
+  <meta name="description" content="Gray Motion Retu - স্বচ্ছ পরিবেশে সুস্বাদু খাবার পরিবেশন, বিশেষ মোরগ বিরিয়ানি, বুকিং, সার্ভিস, গ্যালারি এবং কন্টাক্ট ইনফো।">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="retu.css"/>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="head">
+    <i id="menu" class="fa-solid fa-bars-staggered"></i>
+    <div class="nav">
+      <a href="retu.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="service.html">Service</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact us</a>
+      <span class="search">
+        <input id="inputs" type="text" placeholder="search here..">
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </span>
+    </div>
+  </div>
+  <div class="body">
+    <h2>Gray Motion Retu</h2>
+    <h3>-তে আপনাকে স্বাগতম</h3>
+    <h4>সর্বাধিক স্বচ্ছ ও পরিস্কার পরিবেশে আপনার মুডকে দ্বারুন ও ভোজনকে উপভোক করুন।</h4>
+    <a class="booking" href="contact.html">Book Now</a>
+  </div>
+  <div class="review">
+    <h1>🍜 আজকের স্পেশাল ডিস্ক</h1>
+    <div class="box">
+      <img class="bimg" src="biriani.jpg" alt="biriani">
+      <h2 class="name">মোরগ বিরিয়ানি</h2>
+      <h3 class="price">৳ ৩২০ / প্যাকেট</h3>
+      <button class="buy">Order Now</button>
+    </div>
+    <div class="box">
+      <img class="bimg" src="morog.jpg" alt="মোরগ পোলাও">
+      <h2 class="name">মোরগ পোলাও</h2>
+      <h3 class="price">৳410 / প্যাকেট</h3>
+      <button class="buy">Order Now</button>
+    </div>
+    <div class="box">
+      <img class="bimg" src="vuna.jpg" alt=" মাংস ভুনা">
+      <h2 class="name">মাংস ভুনা</h2>
+      <h3 class="price">৳ 310 / প্যাকেট</h3>
+      <button class="buy">Order Now</button>
+    </div>
+    <div class="box">
+      <img class="bimg" src="thai.jpeg" alt="থাই মাংস">
+      <h2 class="name">থাই মাংস</h2>
+      <h3 class="price">৳400 / প্যাকেট</h3>
+      <button class="buy">Order Now</button>
+    </div>
+    <div class="box">
+      <img class="bimg" src="R.jpeg" alt="বার্গার">
+      <h2 class="name">মসলা বার্গার</h2>
+      <h3 class="price">৳110 / প্যাকেট</h3>
+      <button class="buy">Order Now</button>
+    </div>
+    <div class="box">
+      <img class="bimg" src="pizza.jpeg" alt="Pizza">
+      <h2 class="name">সুপার পিজ্জা</h2>
+      <h3 class="price">৳300 / প্যাকেট</h3>
+      <button class="buy">Order Now</button>
+    </div>
+  </div>
+  <!-- Popup Order Form -->
+  <div class="poporder" id="poporder">
+  <div class="popcontent">
+    <span class="close">&times;</span>
+    <h2>আপনার অর্ডার</h2>
+    <span>
+      <p>ডিশের নাম:</p>
+      <input type="text" id="foodName" readonly>
+    </span>
+    <span>
+      <p>আপনার নাম:</p>
+      <input type="text" id="customerName" placeholder="আপনার নাম লিখুন..">
+    </span>
+    <span>
+      <p>আপনার ফোন নম্বর:</p>
+      <input type="tel" id="customerPhone" placeholder="আপনার ফোন নম্বর লিখুন..">
+    </span>
+    <span>
+      <p>আপনার ঠিকানা:</p>
+      <input type="text" id="customerAddress" placeholder="আপনার ঠিকানা লিখুন..">
+    </span>
+    <span>
+      <p>প্যাকেট সংখ্যা:</p>
+      <input type="number" id="packetQty" placeholder="কত প্যাকেট কিনবেন" min="1">
+    </span>
+    <span>
+      <button id="confirmOrder">নিশ্চিত করুন</button>
+    </span>
+  </div>
+</div>
+   <footer>
+   <div class="all">
+    <div class="info">
+      <h2>Gray Motion Retu</h2>
+      <h3>ঠিকানা:- শ্যামলী, আদাবর, ঢাকা।</h3>
+      <h3>Mail: <a class="text" href="mailto:graymr20@gmail.com">graymr20@gmail.com</a></h3>
+      <h3>Phone: <a class="text" href="tel:+8801602537118">+8801602537118</a></h3>
+    </div>
+    <div class="msg">
+      <a href="https://wa.me/+8801804187223"><i id="whats-app" class="fa-brands fa-whatsapp"></i></a>
+    </div>
+   </div>
+   <hr>
+   <p class="copyright">&copy; 2025 | Gray Motion Retu reserved all rights</p>
+  </footer>
+  <script src="retu.js"></script>
+</body>
+</html>
