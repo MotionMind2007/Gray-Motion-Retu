@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gray Retu - Modern Dining Experience</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="css/retu.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">GRAY <span>RETU</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/service.html">Services</a></li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="pages/contact.html" class="btn" style="padding: 10px 20px; font-size: 13px;">Book Table</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 data-aos="fade-up" data-aos-duration="1500">Exquisite Dining <br>Redefined</h1>
+                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">Discover a symphony of flavors in a modern, sophisticated atmosphere. Gray Retu brings you the finest culinary creations with a silver touch.</p>
+                <div data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1500">
+                    <a href="#special" class="btn">Explore Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Dishes -->
+        <section id="special">
+            <h2 class="section-title" data-aos="fade-up">Explore Our Menu</h2>
+            <div id="food-grid" class="grid">
+                <!-- Products will be loaded from products.json -->
+                <p style="text-align: center; color: var(--primary);">Loading menu items...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Gray Retu</h4>
+                <p>Modern dining with a silver touch in the heart of Dhaka.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="pages/about.html" style="color: grey; text-decoration: none;">About Us</a></p>
+                <p><a href="pages/contact.html" style="color: grey; text-decoration: none;">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Operating Hours</h4>
+                <p>Mon - Sat: 11:00 AM - 11:00 PM</p>
+                <p>Sunday: 12:00 PM - 10:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gray Retu Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    <script src="js/retu.js"></script>
+</body>
+</html>
