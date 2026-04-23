@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-body">
                     <h3>${item.name}</h3>
                     <p>${item.description}</p>
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span style="color:var(--accent); font-weight:700;">${item.price}</span>
-                        <a href="${window.location.pathname.includes('pages/') ? '' : 'pages/'}contact.html" class="btn" style="padding: 8px 15px; font-size: 11px;">Order Now</a>
+                    <div class="card-footer">
+                        <span class="price">${item.price}</span>
+                        <a href="${window.location.pathname.includes('pages/') ? '' : 'pages/'}contact.html" class="btn order-btn">Order Now</a>
                     </div>
                 </div>
             </div>

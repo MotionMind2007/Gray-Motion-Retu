@@ -191,6 +191,27 @@ section {
     margin-bottom: 20px;
 }
 
+/* Card Footer Styling */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.price {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.order-btn {
+    padding: 10px 18px !important;
+    font-size: 12px !important;
+    width: auto !important; /* Allow button to shrink if needed */
+}
+
 /* Contact Form */
 .contact-container {
     max-width: 1000px;
@@ -330,6 +351,18 @@ footer {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    /* Override full width for order buttons in cards */
+    .order-btn {
+        width: auto !important;
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+    }
+
+    .card-footer {
+        flex-wrap: wrap; /* Wrap if name/price is too long on small screens */
+        justify-content: space-between;
     }
 
     nav ul {
